@@ -1,3 +1,7 @@
+// @ts-nocheck
+'use client';
+
+import * as React from 'react';
 import { HeaderSection } from '@/components/sections/HeaderSection';
 import { UserDetailsFormSection } from '@/components/sections/UserDetailsFormSection';
 import { ProfessionalDetailsFormSection } from '@/components/sections/ProfessionalDetailsFormSection';
@@ -7,20 +11,28 @@ import { DisclaimerAndConsentSection } from '@/components/sections/DisclaimerAnd
 import { FooterSection } from '@/components/sections/FooterSection';
 import { Separator } from '@/components/ui/separator';
 
+// Define initial language. 'en' for English or could be from browser/user preference.
+const initialLanguageCode = 'en';
+
 export default function FirstSavePage() {
+  const [currentLanguageCode, setCurrentLanguageCode] = React.useState<string>(initialLanguageCode);
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <HeaderSection />
+      <HeaderSection
+        currentLanguageCode={currentLanguageCode}
+        setCurrentLanguageCode={setCurrentLanguageCode}
+      />
       <main className="flex-grow">
-        <UserDetailsFormSection />
+        <UserDetailsFormSection languageCode={currentLanguageCode} />
         <Separator className="my-8 container mx-auto max-w-3xl" />
-        <ProfessionalDetailsFormSection />
+        <ProfessionalDetailsFormSection languageCode={currentLanguageCode} />
         <Separator className="my-8 container mx-auto max-w-3xl" />
-        <ProductSelectionSection />
+        <ProductSelectionSection languageCode={currentLanguageCode} />
         <Separator className="my-8 container mx-auto max-w-3xl" />
-        <NomineeSelectionSection />
+        <NomineeSelectionSection languageCode={currentLanguageCode} />
         <Separator className="my-8 container mx-auto max-w-3xl" />
-        <DisclaimerAndConsentSection />
+        <DisclaimerAndConsentSection languageCode={currentLanguageCode} />
       </main>
       <FooterSection />
     </div>

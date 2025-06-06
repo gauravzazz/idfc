@@ -3,24 +3,46 @@
 
 import type { AccountSummaryInput } from '@/ai/flows/account-summary';
 import { getAccountSummary } from '@/ai/flows/account-summary';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import * as React from 'react';
 
+const componentTranslations = {
+  en: {
+    aiSummaryTitle: "AI Powered Summary for {accountType}",
+    loadingError: "Could not load account benefits summary at this time.",
+    selectAccountPrompt: "Select an account to see its summary.",
+  },
+  mr: {
+    aiSummaryTitle: "{accountType} साठी AI आधारित सारांश",
+    loadingError: "सध्या खाते लाभांचा सारांश लोड होऊ शकला नाही.",
+    selectAccountPrompt: "खात्याचा सारांश पाहण्यासाठी एक खाते निवडा.",
+  },
+  hi: {
+    aiSummaryTitle: "{accountType} के लिए एआई संचालित सारांश",
+    loadingError: "अभी खाता लाभ सारांश लोड नहीं किया जा सका।",
+    selectAccountPrompt: "सारांश देखने के लिए एक खाता चुनें।",
+  },
+};
+
 interface AccountBenefitSummaryProps {
   accountType: 'CLASSIC' | 'PLATINUM' | null;
+  languageCode: string;
 }
 
-export function AccountBenefitSummary({ accountType }: AccountBenefitSummaryProps) {
+export function AccountBenefitSummary({ accountType, languageCode = 'en' }: AccountBenefitSummaryProps) {
   const [summary, setSummary] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  
+  const lang = languageCode && componentTranslations[languageCode] ? languageCode : 'en';
+  const t = componentTranslations[lang];
 
   React.useEffect(() => {
     if (accountType) {
       setLoading(true);
       setError(null);
-      setSummary(null); // Clear previous summary
+      setSummary(null); 
 
       const fetchSummary = async () => {
         try {
@@ -29,29 +51,29 @@ export function AccountBenefitSummary({ accountType }: AccountBenefitSummaryProp
           setSummary(result.summary);
         } catch (e) {
           console.error("Error fetching account summary:", e);
-          setError("Could not load account benefits summary at this time.");
+          setError(t.loadingError);
         } finally {
           setLoading(false);
         }
       };
-
-      // Debounce or delay if accountType changes rapidly, for now direct call
       fetchSummary();
     } else {
       setSummary(null);
       setLoading(false);
       setError(null);
     }
-  }, [accountType]);
+  }, [accountType, t.loadingError]);
 
   if (!accountType) {
-    return null; // Don't render anything if no account type is selected
+    return null; 
   }
 
   return (
     <Card className="mt-4 border-accent shadow-md">
       <CardHeader>
-        <CardTitle className="text-lg text-accent font-headline">AI Powered Summary for {accountType}</CardTitle>
+        <CardTitle className="text-lg text-accent font-headline">
+          {t.aiSummaryTitle.replace('{accountType}', accountType)}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {loading && (
@@ -62,7 +84,7 @@ export function AccountBenefitSummary({ accountType }: AccountBenefitSummaryProp
         )}
         {error && <p className="text-destructive text-sm">{error}</p>}
         {summary && <p className="text-sm text-foreground">{summary}</p>}
-        {!loading && !summary && !error && <p className="text-sm text-muted-foreground">Select an account to see its summary.</p>}
+        {!loading && !summary && !error && <p className="text-sm text-muted-foreground">{t.selectAccountPrompt}</p>}
       </CardContent>
     </Card>
   );
