@@ -25,24 +25,24 @@ const componentTranslations = {
     selectAccountPrompt: "सारांश देखने के लिए एक खाता चुनें।",
   },
   kn: {
-    aiSummaryTitle: "[KN] AI Powered Summary for {accountType}",
-    loadingError: "[KN] Could not load account benefits summary at this time.",
-    selectAccountPrompt: "[KN] Select an account to see its summary.",
+    aiSummaryTitle: "{accountType} ಗಾಗಿ AI ಚಾಲಿತ ಸಾರಾಂಶ",
+    loadingError: "ಈ ಸಮಯದಲ್ಲಿ ಖಾತೆ ಪ್ರಯೋಜನಗಳ ಸಾರಾಂಶವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
+    selectAccountPrompt: "ಅದರ ಸಾರಾಂಶವನ್ನು ನೋಡಲು ಖಾತೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.",
   },
   ta: {
-    aiSummaryTitle: "[TA] AI Powered Summary for {accountType}",
-    loadingError: "[TA] Could not load account benefits summary at this time.",
-    selectAccountPrompt: "[TA] Select an account to see its summary.",
+    aiSummaryTitle: "{accountType} க்கான AI திறனூட்டப்பட்ட சுருக்கம்",
+    loadingError: "இந்த நேரத்தில் கணக்கு நன்மைகள் சுருக்கத்தை ஏற்ற முடியவில்லை.",
+    selectAccountPrompt: "அதன் சுருக்கத்தைப் பார்க்க ஒரு கணக்கைத் தேர்ந்தெடுக்கவும்.",
   },
   bn: {
-    aiSummaryTitle: "[BN] AI Powered Summary for {accountType}",
-    loadingError: "[BN] Could not load account benefits summary at this time.",
-    selectAccountPrompt: "[BN] Select an account to see its summary.",
+    aiSummaryTitle: "{accountType} এর জন্য AI চালিত সারসংক্ষেপ",
+    loadingError: "এই মুহূর্তে অ্যাকাউন্ট সুবিধাগুলির সারসংক্ষেপ লোড করা যায়নি।",
+    selectAccountPrompt: "এর সারসংক্ষেপ দেখতে একটি অ্যাকাউন্ট নির্বাচন করুন।",
   },
   gu: {
-    aiSummaryTitle: "[GU] AI Powered Summary for {accountType}",
-    loadingError: "[GU] Could not load account benefits summary at this time.",
-    selectAccountPrompt: "[GU] Select an account to see its summary.",
+    aiSummaryTitle: "{accountType} માટે AI સંચાલિત સારાંશ",
+    loadingError: "આ સમયે એકાઉન્ટ લાભોનો સારાંશ લોડ કરી શકાયો નથી.",
+    selectAccountPrompt: "તેનો સારાંશ જોવા માટે એક એકાઉન્ટ પસંદ કરો.",
   },
 };
 
@@ -83,7 +83,7 @@ export function AccountBenefitSummary({ accountType, languageCode = 'en' }: Acco
       setLoading(false);
       setError(null);
     }
-  }, [accountType, t.loadingError, languageCode]); // Added languageCode to dependency array for t updates
+  }, [accountType, t.loadingError, languageCode]);
 
   if (!accountType) {
     return null; 

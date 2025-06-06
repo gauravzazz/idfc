@@ -30,8 +30,6 @@ const headerTranslations = {
     featureAtm: "ATM Transactions, Debit Card",
     featureSms: "SMS Alerts & 30 more services",
     zeroFeeLink: "Click here to view Zero-Fee Banking Services",
-    classApartBadgeAlt: "Class Apart Badge",
-    classApartSubtext: "on select debit cards",
   },
   mr: {
     yourState: "तुमचे राज्य:",
@@ -42,8 +40,6 @@ const headerTranslations = {
     featureAtm: "ATM व्यवहार, डेबिट कार्ड",
     featureSms: "SMS अलर्ट आणि ३० अधिक सेवा",
     zeroFeeLink: "शून्य-शुल्क बँकिंग सेवा पाहण्यासाठी येथे क्लिक करा",
-    classApartBadgeAlt: "क्लास अपार्ट बॅज",
-    classApartSubtext: "निवडक डेबिट कार्डांवर",
   },
   hi: {
     yourState: "आपका राज्य:",
@@ -54,56 +50,46 @@ const headerTranslations = {
     featureAtm: "एटीएम लेनदेन, डेबिट कार्ड",
     featureSms: "एसएमएस अलर्ट और 30 अन्य सेवाएं",
     zeroFeeLink: "शून्य-शुल्क बैंकिंग सेवाएं देखने के लिए यहां क्लिक करें",
-    classApartBadgeAlt: "क्लास अपार्ट बैज",
-    classApartSubtext: "चुनिंदा डेबिट कार्ड पर",
   },
   kn: {
-    yourState: "[KN] Your State:",
-    selectState: "[KN] Select State",
-    headlinePart1: "[KN] Enjoy Zero Fee Banking",
-    headlinePart2: "[KN] on your Savings Account",
-    featureImps: "[KN] IMPS, NEFT, RTGS",
-    featureAtm: "[KN] ATM Transactions, Debit Card",
-    featureSms: "[KN] SMS Alerts & 30 more services",
-    zeroFeeLink: "[KN] Click here to view Zero-Fee Banking Services",
-    classApartBadgeAlt: "[KN] Class Apart Badge",
-    classApartSubtext: "[KN] on select debit cards",
+    yourState: "ನಿಮ್ಮ ರಾಜ್ಯ:",
+    selectState: "ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    headlinePart1: "ಶೂನ್ಯ ಶುಲ್ಕ ಬ್ಯಾಂಕಿಂಗ್ ಆನಂದಿಸಿ",
+    headlinePart2: "ನಿಮ್ಮ ಉಳಿತಾಯ ಖಾತೆಯಲ್ಲಿ",
+    featureImps: "IMPS, NEFT, RTGS",
+    featureAtm: "ಎಟಿಎಂ ವಹಿವಾಟುಗಳು, ಡೆಬಿಟ್ ಕಾರ್ಡ್",
+    featureSms: "ಎಸ್‌ಎಂಎಸ್ ಎಚ್ಚರಿಕೆಗಳು ಮತ್ತು 30 ಹೆಚ್ಚಿನ ಸೇವೆಗಳು",
+    zeroFeeLink: "ಶೂನ್ಯ-ಶುಲ್ಕ ಬ್ಯಾಂಕಿಂಗ್ ಸೇವೆಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
   },
   ta: {
-    yourState: "[TA] Your State:",
-    selectState: "[TA] Select State",
-    headlinePart1: "[TA] Enjoy Zero Fee Banking",
-    headlinePart2: "[TA] on your Savings Account",
-    featureImps: "[TA] IMPS, NEFT, RTGS",
-    featureAtm: "[TA] ATM Transactions, Debit Card",
-    featureSms: "[TA] SMS Alerts & 30 more services",
-    zeroFeeLink: "[TA] Click here to view Zero-Fee Banking Services",
-    classApartBadgeAlt: "[TA] Class Apart Badge",
-    classApartSubtext: "[TA] on select debit cards",
+    yourState: "உங்கள் மாநிலம்:",
+    selectState: "மாநிலத்தைத் தேர்ந்தெடுக்கவும்",
+    headlinePart1: "கட்டணமில்லா பேங்கிங்கை அனுபவியுங்கள்",
+    headlinePart2: "உங்கள் சேமிப்புக் கணக்கில்",
+    featureImps: "IMPS, NEFT, RTGS",
+    featureAtm: "ஏடிஎம் பரிவர்த்தனைகள், டெபிட் கார்டு",
+    featureSms: "எஸ்எம்எஸ் எச்சரிக்கைகள் & 30 க்கும் மேற்பட்ட சேவைகள்",
+    zeroFeeLink: "கட்டணமில்லா வங்கி சேவைகளைப் பார்க்க இங்கே கிளிக் செய்யவும்",
   },
   bn: {
-    yourState: "[BN] Your State:",
-    selectState: "[BN] Select State",
-    headlinePart1: "[BN] Enjoy Zero Fee Banking",
-    headlinePart2: "[BN] on your Savings Account",
-    featureImps: "[BN] IMPS, NEFT, RTGS",
-    featureAtm: "[BN] ATM Transactions, Debit Card",
-    featureSms: "[BN] SMS Alerts & 30 more services",
-    zeroFeeLink: "[BN] Click here to view Zero-Fee Banking Services",
-    classApartBadgeAlt: "[BN] Class Apart Badge",
-    classApartSubtext: "[BN] on select debit cards",
+    yourState: "আপনার রাজ্য:",
+    selectState: "রাজ্য নির্বাচন করুন",
+    headlinePart1: "শূন্য ফি ব্যাংকিং উপভোগ করুন",
+    headlinePart2: "আপনার সেভিংস অ্যাকাউন্টে",
+    featureImps: "IMPS, NEFT, RTGS",
+    featureAtm: "এটিএম লেনদেন, ডেবিট কার্ড",
+    featureSms: "এসএমএস সতর্কতা এবং ৩০টিরও বেশি পরিষেবা",
+    zeroFeeLink: "শূন্য-ফি ব্যাংকিং পরিষেবাগুলি দেখতে এখানে ক্লিক করুন",
   },
   gu: {
-    yourState: "[GU] Your State:",
-    selectState: "[GU] Select State",
-    headlinePart1: "[GU] Enjoy Zero Fee Banking",
-    headlinePart2: "[GU] on your Savings Account",
-    featureImps: "[GU] IMPS, NEFT, RTGS",
-    featureAtm: "[GU] ATM Transactions, Debit Card",
-    featureSms: "[GU] SMS Alerts & 30 more services",
-    zeroFeeLink: "[GU] Click here to view Zero-Fee Banking Services",
-    classApartBadgeAlt: "[GU] Class Apart Badge",
-    classApartSubtext: "[GU] on select debit cards",
+    yourState: "તમારું રાજ્ય:",
+    selectState: "રાજ્ય પસંદ કરો",
+    headlinePart1: "શૂન્ય ફી બેંકિંગનો આનંદ માણો",
+    headlinePart2: "તમારા બચત ખાતા પર",
+    featureImps: "IMPS, NEFT, RTGS",
+    featureAtm: "એટીએમ વ્યવહારો, ડેબિટ કાર્ડ",
+    featureSms: "એસએમએસ એલર્ટ અને ૩0 વધુ સેવાઓ",
+    zeroFeeLink: "શૂન્ય-ફી બેંકિંગ સેવાઓ જોવા માટે અહીં ક્લિક કરો",
   },
 };
 
@@ -122,7 +108,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
     if (selected && selected.languageCode) {
       setCurrentLanguageCode(selected.languageCode);
     } else {
-      setCurrentLanguageCode("en"); // Fallback to English
+      setCurrentLanguageCode("en"); 
     }
   }, [setCurrentLanguageCode]);
   
@@ -139,7 +125,6 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
       else if (browserLang === 'gu') suggestedStateValue = "GJ";
       
       if (suggestedStateValue !== "default") {
-        // Check if the suggested state value exists in our list
         const stateExists = indianStates.some(state => state.value === suggestedStateValue);
         if (stateExists) {
             handleStateChange(suggestedStateValue);
@@ -165,7 +150,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
               <SelectContent>
                 {indianStates.map(state => (
                   <SelectItem key={state.value} value={state.value}>
-                    {state.label} {/* State names are usually in English or recognizable */}
+                    {state.label} 
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -206,7 +191,6 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
                 <span>{t.featureSms}</span>
               </li>
             </ul>
-             {/* Removed Image for "Class Apart" badge */}
             <div className="mt-auto text-right">
               <Button variant="link" className="text-xs sm:text-sm text-white hover:text-yellow-300 p-0 h-auto">
                 {t.zeroFeeLink}
