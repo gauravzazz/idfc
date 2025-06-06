@@ -14,7 +14,7 @@ import { CardIconSvg } from '@/components/icons/CardIconSvg';
 import { OffersIconSvg } from '@/components/icons/OffersIconSvg';
 import { PurchaseProtectionIcon } from '@/components/icons/PurchaseProtectionIcon';
 import { Check, ChevronDown, X } from 'lucide-react';
-import { AccountBenefitSummary } from '@/components/AccountBenefitSummary';
+// import { AccountBenefitSummary } from '@/components/AccountBenefitSummary'; // Removed import
 
 const sectionTranslations = {
   en: {
@@ -274,12 +274,10 @@ export function ProductSelectionSection({ languageCode = 'en' }: ProductSelectio
 
   const handleProductChange = (value: string) => {
     const productKey = value.split('_')[0] as 'CLASSIC' | 'PLATINUM';
-    // Ensure productKey is always 'CLASSIC' or 'PLATINUM' for AccountBenefitSummary
     const validProductKey = (productKey === 'CLASSIC' || productKey === 'PLATINUM') ? productKey : null;
     setSelectedProduct(validProductKey);
   };
   
-  // Effect to derive selected product name based on language for RadioGroup value
   const radioGroupValue = React.useMemo(() => {
     if (!selectedProduct) return currentProducts.find(p => p.popular)?.id || currentProducts[0]?.id;
     const targetProduct = currentProducts.find(p => p.id.startsWith(selectedProduct));
@@ -334,7 +332,7 @@ export function ProductSelectionSection({ languageCode = 'en' }: ProductSelectio
             ))}
           </RadioGroup>
           
-          <AccountBenefitSummary accountType={selectedProduct} languageCode={languageCode} />
+          {/* AccountBenefitSummary component removed from here */}
 
           <Accordion type="single" collapsible className="w-full mt-8">
             <AccordionItem value="features">
