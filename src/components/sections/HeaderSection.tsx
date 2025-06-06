@@ -132,19 +132,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
                 <span>{t.featureSms}</span>
               </li>
             </ul>
-            <div className="my-3 sm:my-4">
-              <Image
-                src="https://placehold.co/220x110.png" 
-                alt="IDFC FIRST Bank recognized as Class Apart"
-                width={220}
-                height={110}
-                className="rounded-md"
-                data-ai-hint="bank award badge"
-              />
-               <p className="text-xs mt-1 opacity-80">
-                {t.classApartText}
-              </p>
-            </div>
+            {/* Removed Image and paragraph for "Class Apart" badge */}
             <div className="mt-auto text-right">
               <Button variant="link" className="text-xs sm:text-sm text-white hover:text-yellow-300 p-0 h-auto">
                 {t.zeroFeeLink}
