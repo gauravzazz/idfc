@@ -28,7 +28,6 @@ const headerTranslations = {
     featureImps: "IMPS, NEFT, RTGS",
     featureAtm: "ATM Transactions, Debit Card",
     featureSms: "SMS Alerts & 30 more services",
-    classApartText: "IDFC FIRST Bank features in Category A in the report 'Benchmarking reasonableness of Service Charges by Banks in India', released on 22nd May 2024.",
     zeroFeeLink: "Click here to view Zero-Fee Banking Services",
   },
   mr: {
@@ -39,7 +38,6 @@ const headerTranslations = {
     featureImps: "IMPS, NEFT, RTGS",
     featureAtm: "ATM व्यवहार, डेबिट कार्ड",
     featureSms: "SMS अलर्ट आणि ३० अधिक सेवा",
-    classApartText: "IDFC FIRST बँकेचा 'बेंचमार्किंग रिझनेबलनेस ऑफ सर्व्हिस चार्जेस बाय बँक्स इन इंडिया' या २२ मे २०२४ रोजी प्रसिद्ध झालेल्या अहवालात 'श्रेणी A' मध्ये समावेश आहे.",
     zeroFeeLink: "शून्य-शुल्क बँकिंग सेवा पाहण्यासाठी येथे क्लिक करा",
   },
   hi: {
@@ -50,7 +48,6 @@ const headerTranslations = {
     featureImps: "IMPS, NEFT, RTGS",
     featureAtm: "एटीएम लेनदेन, डेबिट कार्ड",
     featureSms: "एसएमएस अलर्ट और 30 अन्य सेवाएं",
-    classApartText: "IDFC FIRST बैंक को 'भारत में बैंकों द्वारा सेवा शुल्कों की तर्कसंगतता का बेंचमार्किंग' रिपोर्ट में श्रेणी ए में शामिल किया गया है, जो 22 मई 2024 को जारी की गई थी।",
     zeroFeeLink: "शून्य-शुल्क बैंकिंग सेवाएं देखने के लिए यहां क्लिक करें",
   },
 };
@@ -64,7 +61,7 @@ interface HeaderSectionProps {
 export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: HeaderSectionProps) {
   const [selectedStateValue, setSelectedStateValue] = React.useState<string>("default");
 
-  const handleStateChange = (value: string) => {
+  const handleStateChange = React.useCallback((value: string) => {
     setSelectedStateValue(value);
     const selected = indianStates.find(s => s.value === value);
     if (selected && selected.languageCode) {
@@ -72,8 +69,26 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
     } else {
       setCurrentLanguageCode("en"); // Fallback to English
     }
-  };
+  }, [setCurrentLanguageCode]);
   
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && navigator.language) {
+      const browserLang = navigator.language.split('-')[0].toLowerCase();
+      let suggestedStateValue = "default";
+
+      if (browserLang === 'mr') suggestedStateValue = "MH";
+      else if (browserLang === 'hi') suggestedStateValue = "UP";
+      else if (browserLang === 'kn') suggestedStateValue = "KA";
+      else if (browserLang === 'ta') suggestedStateValue = "TN";
+      else if (browserLang === 'bn') suggestedStateValue = "WB";
+      else if (browserLang === 'gu') suggestedStateValue = "GJ";
+      
+      if (suggestedStateValue !== "default") {
+        handleStateChange(suggestedStateValue);
+      }
+    }
+  }, [handleStateChange]);
+
   const lang = currentLanguageCode && headerTranslations[currentLanguageCode] ? currentLanguageCode : 'en';
   const t = headerTranslations[lang];
 
@@ -132,7 +147,6 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
                 <span>{t.featureSms}</span>
               </li>
             </ul>
-            {/* Removed Image and paragraph for "Class Apart" badge */}
             <div className="mt-auto text-right">
               <Button variant="link" className="text-xs sm:text-sm text-white hover:text-yellow-300 p-0 h-auto">
                 {t.zeroFeeLink}
