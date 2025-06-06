@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 'use client';
 
@@ -12,7 +13,7 @@ const sectionTranslations = {
   en: {
     disclaimerTitle: "Disclaimer",
     kycConfirmation: "I confirm that <strong>I will complete full KYC within 30 days.</strong> In case of failure in doing so, bank reserves a right to initiate closure of my savings account.",
-    termsConsentLabel: "I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms &amp; conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
+    termsConsentLabel: "I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms & conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
     proceedButton: "Proceed to open account",
   },
   mr: {
@@ -27,6 +28,30 @@ const sectionTranslations = {
     termsConsentLabel: "मैं आईडीएफसी फर्स्ट बैंक से संबंधित सभी <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">नियम और शर्तें</Button> स्वीकार करता हूं और पुष्टि करता हूं कि मैं केवल भारत का नागरिक हूं, भारत में पैदा हुआ हूं और केवल भारत का कर निवासी हूं।",
     proceedButton: "खाता खोलने के लिए आगे बढ़ें",
   },
+  kn: {
+    disclaimerTitle: "[KN] Disclaimer",
+    kycConfirmation: "[KN] I confirm that <strong>I will complete full KYC within 30 days.</strong> In case of failure in doing so, bank reserves a right to initiate closure of my savings account.",
+    termsConsentLabel: "[KN] I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms & conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
+    proceedButton: "[KN] Proceed to open account",
+  },
+  ta: {
+    disclaimerTitle: "[TA] Disclaimer",
+    kycConfirmation: "[TA] I confirm that <strong>I will complete full KYC within 30 days.</strong> In case of failure in doing so, bank reserves a right to initiate closure of my savings account.",
+    termsConsentLabel: "[TA] I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms & conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
+    proceedButton: "[TA] Proceed to open account",
+  },
+  bn: {
+    disclaimerTitle: "[BN] Disclaimer",
+    kycConfirmation: "[BN] I confirm that <strong>I will complete full KYC within 30 days.</strong> In case of failure in doing so, bank reserves a right to initiate closure of my savings account.",
+    termsConsentLabel: "[BN] I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms & conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
+    proceedButton: "[BN] Proceed to open account",
+  },
+  gu: {
+    disclaimerTitle: "[GU] Disclaimer",
+    kycConfirmation: "[GU] I confirm that <strong>I will complete full KYC within 30 days.</strong> In case of failure in doing so, bank reserves a right to initiate closure of my savings account.",
+    termsConsentLabel: "[GU] I accept all <Button variant=\"link\" class=\"text-accent p-0 h-auto inline-block\">terms & conditions</Button> related to IDFC FIRST Bank and confirm that I am citizen of only India, born in India and a tax resident of India only.",
+    proceedButton: "[GU] Proceed to open account",
+  },
 };
 
 
@@ -38,11 +63,13 @@ export function DisclaimerAndConsentSection({ languageCode = 'en' }: DisclaimerA
   const lang = languageCode && sectionTranslations[languageCode] ? languageCode : 'en';
   const t = sectionTranslations[lang];
 
-  // A bit of a hack to make the button inside Label translatable and clickable
-  // For a real app, you'd use a proper i18n library that handles HTML in translations.
   const termsLabelParts = t.termsConsentLabel.split(/<Button.*?<\/Button>/);
   const termsButtonTextMatch = t.termsConsentLabel.match(/<Button.*?>(.*?)<\/Button>/);
-  const termsButtonText = termsButtonTextMatch ? termsButtonTextMatch[1] : "terms & conditions";
+  
+  let termsButtonText = "terms & conditions"; // Default English
+  if (lang === 'mr') termsButtonText = "अटी आणि नियम";
+  else if (lang === 'hi') termsButtonText = "नियम और शर्तें";
+  else if (termsButtonTextMatch) termsButtonText = termsButtonTextMatch[1];
 
 
   return (

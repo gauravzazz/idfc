@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 'use client';
 
@@ -22,6 +23,26 @@ const componentTranslations = {
     aiSummaryTitle: "{accountType} के लिए एआई संचालित सारांश",
     loadingError: "अभी खाता लाभ सारांश लोड नहीं किया जा सका।",
     selectAccountPrompt: "सारांश देखने के लिए एक खाता चुनें।",
+  },
+  kn: {
+    aiSummaryTitle: "[KN] AI Powered Summary for {accountType}",
+    loadingError: "[KN] Could not load account benefits summary at this time.",
+    selectAccountPrompt: "[KN] Select an account to see its summary.",
+  },
+  ta: {
+    aiSummaryTitle: "[TA] AI Powered Summary for {accountType}",
+    loadingError: "[TA] Could not load account benefits summary at this time.",
+    selectAccountPrompt: "[TA] Select an account to see its summary.",
+  },
+  bn: {
+    aiSummaryTitle: "[BN] AI Powered Summary for {accountType}",
+    loadingError: "[BN] Could not load account benefits summary at this time.",
+    selectAccountPrompt: "[BN] Select an account to see its summary.",
+  },
+  gu: {
+    aiSummaryTitle: "[GU] AI Powered Summary for {accountType}",
+    loadingError: "[GU] Could not load account benefits summary at this time.",
+    selectAccountPrompt: "[GU] Select an account to see its summary.",
   },
 };
 
@@ -62,7 +83,7 @@ export function AccountBenefitSummary({ accountType, languageCode = 'en' }: Acco
       setLoading(false);
       setError(null);
     }
-  }, [accountType, t.loadingError]);
+  }, [accountType, t.loadingError, languageCode]); // Added languageCode to dependency array for t updates
 
   if (!accountType) {
     return null; 

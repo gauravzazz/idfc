@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 'use client';
 
@@ -99,6 +100,118 @@ const sectionTranslations = {
     moreLink: "अधिक जानकारी के लिए यहां क्लिक करें",
     allOffersLink: "सभी ऑफ़र्स",
     clickHereToView: "देखने के लिए यहां क्लिक करें"
+  },
+  kn: {
+    title: "[KN] Select your <strong class=\"font-bold\">product</strong>",
+    eachProductGives: "[KN] Each product gives you:",
+    commonBenefitInterest: { text: "[KN] Up to", value: "7%", subtext: "[KN] p.a. interest" },
+    commonBenefitMonthly: { text: "[KN] Monthly", value: "", subtext: "[KN] interest credit" },
+    commonBenefitZeroCharges: { text: "[KN] Zero Charges", value: "", subtext: "[KN] on all services" },
+    ambLabel: "[KN] Average Monthly Balance",
+    classicCard: "[KN] VISA Classic Debit card",
+    platinumCard: "[KN] VISA Platinum Debit Card",
+    popular: "[KN] Popular",
+    selectButton: "[KN] Select",
+    compareFeatures: "[KN] Compare Features",
+    featureHeader: "[KN] Feature",
+    classicHeader: "[KN] Classic",
+    platinumHeader: "[KN] Platinum",
+    airportLounge: "[KN] Airport Lounge Access",
+    domestic1PerQuarter: "[KN] Domestic 1/Quarter",
+    freeAtm: "[KN] Free ATM Transactions",
+    unlimited: "[KN] Unlimited",
+    lockerDiscount: "[KN] Locker Rental Discount",
+    womenOnly: "[KN] Women Only",
+    instantDiscounts: "[KN] Instant Online Discounts",
+    instantDiscountsSubtext: "[KN] (TATA CliQ, Yatra, Lifestyle & more)",
+    purchaseProtection: "[KN] Purchase Protection",
+    moreLink: "[KN] Click here for More",
+    allOffersLink: "[KN] All Offers",
+    clickHereToView: "[KN] Click here to view"
+  },
+  ta: {
+    title: "[TA] Select your <strong class=\"font-bold\">product</strong>",
+    eachProductGives: "[TA] Each product gives you:",
+    commonBenefitInterest: { text: "[TA] Up to", value: "7%", subtext: "[TA] p.a. interest" },
+    commonBenefitMonthly: { text: "[TA] Monthly", value: "", subtext: "[TA] interest credit" },
+    commonBenefitZeroCharges: { text: "[TA] Zero Charges", value: "", subtext: "[TA] on all services" },
+    ambLabel: "[TA] Average Monthly Balance",
+    classicCard: "[TA] VISA Classic Debit card",
+    platinumCard: "[TA] VISA Platinum Debit Card",
+    popular: "[TA] Popular",
+    selectButton: "[TA] Select",
+    compareFeatures: "[TA] Compare Features",
+    featureHeader: "[TA] Feature",
+    classicHeader: "[TA] Classic",
+    platinumHeader: "[TA] Platinum",
+    airportLounge: "[TA] Airport Lounge Access",
+    domestic1PerQuarter: "[TA] Domestic 1/Quarter",
+    freeAtm: "[TA] Free ATM Transactions",
+    unlimited: "[TA] Unlimited",
+    lockerDiscount: "[TA] Locker Rental Discount",
+    womenOnly: "[TA] Women Only",
+    instantDiscounts: "[TA] Instant Online Discounts",
+    instantDiscountsSubtext: "[TA] (TATA CliQ, Yatra, Lifestyle & more)",
+    purchaseProtection: "[TA] Purchase Protection",
+    moreLink: "[TA] Click here for More",
+    allOffersLink: "[TA] All Offers",
+    clickHereToView: "[TA] Click here to view"
+  },
+  bn: {
+    title: "[BN] Select your <strong class=\"font-bold\">product</strong>",
+    eachProductGives: "[BN] Each product gives you:",
+    commonBenefitInterest: { text: "[BN] Up to", value: "7%", subtext: "[BN] p.a. interest" },
+    commonBenefitMonthly: { text: "[BN] Monthly", value: "", subtext: "[BN] interest credit" },
+    commonBenefitZeroCharges: { text: "[BN] Zero Charges", value: "", subtext: "[BN] on all services" },
+    ambLabel: "[BN] Average Monthly Balance",
+    classicCard: "[BN] VISA Classic Debit card",
+    platinumCard: "[BN] VISA Platinum Debit Card",
+    popular: "[BN] Popular",
+    selectButton: "[BN] Select",
+    compareFeatures: "[BN] Compare Features",
+    featureHeader: "[BN] Feature",
+    classicHeader: "[BN] Classic",
+    platinumHeader: "[BN] Platinum",
+    airportLounge: "[BN] Airport Lounge Access",
+    domestic1PerQuarter: "[BN] Domestic 1/Quarter",
+    freeAtm: "[BN] Free ATM Transactions",
+    unlimited: "[BN] Unlimited",
+    lockerDiscount: "[BN] Locker Rental Discount",
+    womenOnly: "[BN] Women Only",
+    instantDiscounts: "[BN] Instant Online Discounts",
+    instantDiscountsSubtext: "[BN] (TATA CliQ, Yatra, Lifestyle & more)",
+    purchaseProtection: "[BN] Purchase Protection",
+    moreLink: "[BN] Click here for More",
+    allOffersLink: "[BN] All Offers",
+    clickHereToView: "[BN] Click here to view"
+  },
+  gu: {
+    title: "[GU] Select your <strong class=\"font-bold\">product</strong>",
+    eachProductGives: "[GU] Each product gives you:",
+    commonBenefitInterest: { text: "[GU] Up to", value: "7%", subtext: "[GU] p.a. interest" },
+    commonBenefitMonthly: { text: "[GU] Monthly", value: "", subtext: "[GU] interest credit" },
+    commonBenefitZeroCharges: { text: "[GU] Zero Charges", value: "", subtext: "[GU] on all services" },
+    ambLabel: "[GU] Average Monthly Balance",
+    classicCard: "[GU] VISA Classic Debit card",
+    platinumCard: "[GU] VISA Platinum Debit Card",
+    popular: "[GU] Popular",
+    selectButton: "[GU] Select",
+    compareFeatures: "[GU] Compare Features",
+    featureHeader: "[GU] Feature",
+    classicHeader: "[GU] Classic",
+    platinumHeader: "[GU] Platinum",
+    airportLounge: "[GU] Airport Lounge Access",
+    domestic1PerQuarter: "[GU] Domestic 1/Quarter",
+    freeAtm: "[GU] Free ATM Transactions",
+    unlimited: "[GU] Unlimited",
+    lockerDiscount: "[GU] Locker Rental Discount",
+    womenOnly: "[GU] Women Only",
+    instantDiscounts: "[GU] Instant Online Discounts",
+    instantDiscountsSubtext: "[GU] (TATA CliQ, Yatra, Lifestyle & more)",
+    purchaseProtection: "[GU] Purchase Protection",
+    moreLink: "[GU] Click here for More",
+    allOffersLink: "[GU] All Offers",
+    clickHereToView: "[GU] Click here to view"
   }
 };
 
@@ -114,6 +227,22 @@ const productsData = {
   hi: [
     { id: "CLASSIC_F", name: "क्लासिक", amb: "₹10,000", cardTypeKey: "classicCard", popular: false },
     { id: "PLATINUM_F", name: "प्लेटिनम", amb: "₹25,000", cardTypeKey: "platinumCard", popular: true },
+  ],
+  kn: [
+    { id: "CLASSIC_F", name: "[KN] Classic", amb: "₹10,000", cardTypeKey: "classicCard", popular: false },
+    { id: "PLATINUM_F", name: "[KN] Platinum", amb: "₹25,000", cardTypeKey: "platinumCard", popular: true },
+  ],
+  ta: [
+    { id: "CLASSIC_F", name: "[TA] Classic", amb: "₹10,000", cardTypeKey: "classicCard", popular: false },
+    { id: "PLATINUM_F", name: "[TA] Platinum", amb: "₹25,000", cardTypeKey: "platinumCard", popular: true },
+  ],
+  bn: [
+    { id: "CLASSIC_F", name: "[BN] Classic", amb: "₹10,000", cardTypeKey: "classicCard", popular: false },
+    { id: "PLATINUM_F", name: "[BN] Platinum", amb: "₹25,000", cardTypeKey: "platinumCard", popular: true },
+  ],
+  gu: [
+    { id: "CLASSIC_F", name: "[GU] Classic", amb: "₹10,000", cardTypeKey: "classicCard", popular: false },
+    { id: "PLATINUM_F", name: "[GU] Platinum", amb: "₹25,000", cardTypeKey: "platinumCard", popular: true },
   ]
 };
 
@@ -168,19 +297,26 @@ export function ProductSelectionSection({ languageCode = 'en' }: ProductSelectio
         </CardHeader>
         <CardContent className="p-6">
           <RadioGroup
-            defaultValue="PLATINUM_F" // This needs to align with selectedProduct initial state's logic
+            defaultValue="PLATINUM_F" 
+            value={`${selectedProduct}_F`} // Ensure RadioGroup reflects selectedProduct
             onValueChange={(value) => handleProductChange(value)}
             className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
           >
             {currentProducts.map(product => (
-              <Label htmlFor={product.id} key={product.id} className={`relative block rounded-lg border-2 p-4 cursor-pointer transition-all hover:shadow-xl ${selectedProduct === product.name.toUpperCase() ? 'border-accent ring-2 ring-accent shadow-xl' : 'border-input'}`}>
+              <Label 
+                htmlFor={product.id} 
+                key={product.id} 
+                className={`relative block rounded-lg border-2 p-4 cursor-pointer transition-all hover:shadow-xl 
+                            ${selectedProduct === product.name.toUpperCase() || (selectedProduct === product.name) ? 'border-accent ring-2 ring-accent shadow-xl' : 'border-input'}`}
+              >
                 {product.popular && <div className="absolute top-0 right-0 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg rounded-tr-md">{t.popular}</div>}
                 <RadioGroupItem value={product.id} id={product.id} className="sr-only" />
                 <div className="text-center">
                   <p className="text-xl font-bold text-primary">{product.amb}</p>
                   <p className="text-sm text-muted-foreground">{t.ambLabel}</p>
                   <p className="text-sm text-muted-foreground mt-1">{t[product.cardTypeKey]}</p>
-                  <div className={`mt-4 py-2 px-4 rounded-md font-semibold text-lg transition-colors ${selectedProduct === product.name.toUpperCase() ? 'bg-accent text-accent-foreground' : 'bg-secondary text-secondary-foreground hover:bg-muted'}`}>
+                  <div className={`mt-4 py-2 px-4 rounded-md font-semibold text-lg transition-colors 
+                                  ${selectedProduct === product.name.toUpperCase() || (selectedProduct === product.name) ? 'bg-accent text-accent-foreground' : 'bg-secondary text-secondary-foreground hover:bg-muted'}`}>
                     {t.selectButton}
                   </div>
                 </div>

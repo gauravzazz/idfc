@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 'use client';
 
@@ -10,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 
 const indianStates = [
-  { value: "default", label: "Select Your State", language: null, languageCode: "en" }, // Default to English
+  { value: "default", label: "Select Your State", language: null, languageCode: "en" },
   { value: "MH", label: "Maharashtra", language: "Marathi", languageCode: "mr" },
   { value: "KA", label: "Karnataka", language: "Kannada", languageCode: "kn" },
   { value: "TN", label: "Tamil Nadu", language: "Tamil", languageCode: "ta" },
@@ -29,6 +30,8 @@ const headerTranslations = {
     featureAtm: "ATM Transactions, Debit Card",
     featureSms: "SMS Alerts & 30 more services",
     zeroFeeLink: "Click here to view Zero-Fee Banking Services",
+    classApartBadgeAlt: "Class Apart Badge",
+    classApartSubtext: "on select debit cards",
   },
   mr: {
     yourState: "तुमचे राज्य:",
@@ -39,6 +42,8 @@ const headerTranslations = {
     featureAtm: "ATM व्यवहार, डेबिट कार्ड",
     featureSms: "SMS अलर्ट आणि ३० अधिक सेवा",
     zeroFeeLink: "शून्य-शुल्क बँकिंग सेवा पाहण्यासाठी येथे क्लिक करा",
+    classApartBadgeAlt: "क्लास अपार्ट बॅज",
+    classApartSubtext: "निवडक डेबिट कार्डांवर",
   },
   hi: {
     yourState: "आपका राज्य:",
@@ -49,6 +54,56 @@ const headerTranslations = {
     featureAtm: "एटीएम लेनदेन, डेबिट कार्ड",
     featureSms: "एसएमएस अलर्ट और 30 अन्य सेवाएं",
     zeroFeeLink: "शून्य-शुल्क बैंकिंग सेवाएं देखने के लिए यहां क्लिक करें",
+    classApartBadgeAlt: "क्लास अपार्ट बैज",
+    classApartSubtext: "चुनिंदा डेबिट कार्ड पर",
+  },
+  kn: {
+    yourState: "[KN] Your State:",
+    selectState: "[KN] Select State",
+    headlinePart1: "[KN] Enjoy Zero Fee Banking",
+    headlinePart2: "[KN] on your Savings Account",
+    featureImps: "[KN] IMPS, NEFT, RTGS",
+    featureAtm: "[KN] ATM Transactions, Debit Card",
+    featureSms: "[KN] SMS Alerts & 30 more services",
+    zeroFeeLink: "[KN] Click here to view Zero-Fee Banking Services",
+    classApartBadgeAlt: "[KN] Class Apart Badge",
+    classApartSubtext: "[KN] on select debit cards",
+  },
+  ta: {
+    yourState: "[TA] Your State:",
+    selectState: "[TA] Select State",
+    headlinePart1: "[TA] Enjoy Zero Fee Banking",
+    headlinePart2: "[TA] on your Savings Account",
+    featureImps: "[TA] IMPS, NEFT, RTGS",
+    featureAtm: "[TA] ATM Transactions, Debit Card",
+    featureSms: "[TA] SMS Alerts & 30 more services",
+    zeroFeeLink: "[TA] Click here to view Zero-Fee Banking Services",
+    classApartBadgeAlt: "[TA] Class Apart Badge",
+    classApartSubtext: "[TA] on select debit cards",
+  },
+  bn: {
+    yourState: "[BN] Your State:",
+    selectState: "[BN] Select State",
+    headlinePart1: "[BN] Enjoy Zero Fee Banking",
+    headlinePart2: "[BN] on your Savings Account",
+    featureImps: "[BN] IMPS, NEFT, RTGS",
+    featureAtm: "[BN] ATM Transactions, Debit Card",
+    featureSms: "[BN] SMS Alerts & 30 more services",
+    zeroFeeLink: "[BN] Click here to view Zero-Fee Banking Services",
+    classApartBadgeAlt: "[BN] Class Apart Badge",
+    classApartSubtext: "[BN] on select debit cards",
+  },
+  gu: {
+    yourState: "[GU] Your State:",
+    selectState: "[GU] Select State",
+    headlinePart1: "[GU] Enjoy Zero Fee Banking",
+    headlinePart2: "[GU] on your Savings Account",
+    featureImps: "[GU] IMPS, NEFT, RTGS",
+    featureAtm: "[GU] ATM Transactions, Debit Card",
+    featureSms: "[GU] SMS Alerts & 30 more services",
+    zeroFeeLink: "[GU] Click here to view Zero-Fee Banking Services",
+    classApartBadgeAlt: "[GU] Class Apart Badge",
+    classApartSubtext: "[GU] on select debit cards",
   },
 };
 
@@ -84,7 +139,11 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
       else if (browserLang === 'gu') suggestedStateValue = "GJ";
       
       if (suggestedStateValue !== "default") {
-        handleStateChange(suggestedStateValue);
+        // Check if the suggested state value exists in our list
+        const stateExists = indianStates.some(state => state.value === suggestedStateValue);
+        if (stateExists) {
+            handleStateChange(suggestedStateValue);
+        }
       }
     }
   }, [handleStateChange]);
@@ -106,7 +165,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
               <SelectContent>
                 {indianStates.map(state => (
                   <SelectItem key={state.value} value={state.value}>
-                    {state.label}
+                    {state.label} {/* State names are usually in English or recognizable */}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -118,7 +177,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
           <div className="w-full md:w-3/5">
             <Image
               src="https://qa-ntb.idfcfirstbank.com/HH-ABC-Banner~9d6def.png"
-              alt="Savings account offer"
+              alt="Savings account offer by IDFC First Bank featuring Amitabh Bachchan"
               width={858} 
               height={536}
               className="object-cover w-full h-full"
@@ -147,6 +206,7 @@ export function HeaderSection({ currentLanguageCode, setCurrentLanguageCode }: H
                 <span>{t.featureSms}</span>
               </li>
             </ul>
+             {/* Removed Image for "Class Apart" badge */}
             <div className="mt-auto text-right">
               <Button variant="link" className="text-xs sm:text-sm text-white hover:text-yellow-300 p-0 h-auto">
                 {t.zeroFeeLink}

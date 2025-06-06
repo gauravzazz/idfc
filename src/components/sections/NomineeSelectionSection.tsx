@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 'use client';
 
@@ -31,6 +32,38 @@ const sectionTranslations = {
     advocate: "हम सलाह देते हैं कि आप नामांकन के लाभों और अपने खाते में किसी को नामांकित न करने के परिणामों पर विचार करें।",
     yesNominee: "हाँ, नॉमिनी जोड़ें",
     noNominee: "नहीं, मैं किसी को नामांकित नहीं करना चाहता",
+  },
+  kn: {
+    title: "[KN] Do you want to add a Nominee?",
+    recommendation: "[KN] We strongly recommend that you add a nominee to secure deposit settlements.",
+    explanation: "[KN] In event of account holder’s death, the amount of deposit in the account will be returned to the nominee by IDFC FIRST Bank Ltd.",
+    advocate: "[KN] We advocate that you consider the advantages of nomination and the consequences of not nominating anyone to your account.",
+    yesNominee: "[KN] Yes, Add nominee",
+    noNominee: "[KN] No, I do not wish to nominate anyone",
+  },
+  ta: {
+    title: "[TA] Do you want to add a Nominee?",
+    recommendation: "[TA] We strongly recommend that you add a nominee to secure deposit settlements.",
+    explanation: "[TA] In event of account holder’s death, the amount of deposit in the account will be returned to the nominee by IDFC FIRST Bank Ltd.",
+    advocate: "[TA] We advocate that you consider the advantages of nomination and the consequences of not nominating anyone to your account.",
+    yesNominee: "[TA] Yes, Add nominee",
+    noNominee: "[TA] No, I do not wish to nominate anyone",
+  },
+  bn: {
+    title: "[BN] Do you want to add a Nominee?",
+    recommendation: "[BN] We strongly recommend that you add a nominee to secure deposit settlements.",
+    explanation: "[BN] In event of account holder’s death, the amount of deposit in the account will be returned to the nominee by IDFC FIRST Bank Ltd.",
+    advocate: "[BN] We advocate that you consider the advantages of nomination and the consequences of not nominating anyone to your account.",
+    yesNominee: "[BN] Yes, Add nominee",
+    noNominee: "[BN] No, I do not wish to nominate anyone",
+  },
+  gu: {
+    title: "[GU] Do you want to add a Nominee?",
+    recommendation: "[GU] We strongly recommend that you add a nominee to secure deposit settlements.",
+    explanation: "[GU] In event of account holder’s death, the amount of deposit in the account will be returned to the nominee by IDFC FIRST Bank Ltd.",
+    advocate: "[GU] We advocate that you consider the advantages of nomination and the consequences of not nominating anyone to your account.",
+    yesNominee: "[GU] Yes, Add nominee",
+    noNominee: "[GU] No, I do not wish to nominate anyone",
   },
 };
 
