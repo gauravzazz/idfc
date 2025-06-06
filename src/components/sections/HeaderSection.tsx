@@ -32,7 +32,7 @@ export function HeaderSection() {
   const [translationError, setTranslationError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    constcurrentState = indianStates.find(s => s.value === selectedState);
+    const currentState = indianStates.find(s => s.value === selectedState);
     if (currentState && currentState.language) {
       setIsLoadingTranslation(true);
       setTranslationError(null);
