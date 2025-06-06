@@ -10,6 +10,7 @@ import { NomineeSelectionSection } from '@/components/sections/NomineeSelectionS
 import { DisclaimerAndConsentSection } from '@/components/sections/DisclaimerAndConsentSection';
 import { FooterSection } from '@/components/sections/FooterSection';
 import { Separator } from '@/components/ui/separator';
+import { ChatbotWidget } from '@/components/widgets/ChatbotWidget'; // Added import
 
 // Define initial language. 'en' for English or could be from browser/user preference.
 const initialLanguageCode = 'en';
@@ -35,6 +36,9 @@ export default function FirstSavePage() {
         <DisclaimerAndConsentSection languageCode={currentLanguageCode} />
       </main>
       <FooterSection />
+      <ChatbotWidget languageCode={currentLanguageCode} /> {/* Added ChatbotWidget */}
     </div>
   );
 }
+
+    

@@ -4,4 +4,5 @@ import { config } from 'dotenv';
 config();
 
 import '@/ai/flows/account-summary.ts';
-// Removed translate-text-flow import
+import '@/ai/flows/chatbot-flow.ts'; // Added import for the new chatbot flow
+
