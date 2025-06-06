@@ -12,17 +12,18 @@ export function HeaderSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <div className="md:col-span-1">
             <Image
-              src="https://placehold.co/400x600.png" 
+              src="https://qa-ntb.idfcfirstbank.com/HH-ABC-Banner~9d6def.png"
               alt="Savings account offer"
               width={400}
               height={600}
               className="rounded-lg object-cover w-full h-auto max-h-[300px] md:max-h-[400px]"
               data-ai-hint="bank promotion"
+              priority
             />
           </div>
           <div className="md:col-span-2 flex flex-col items-center md:items-start">
             <Image
-              src="https://placehold.co/600x250.png" 
+              src="https://qa-ntb.idfcfirstbank.com/HH-ZFB-Banner~30539e.svg"
               alt="Zero fee banking"
               width={600}
               height={250}
