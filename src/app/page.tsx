@@ -1,4 +1,5 @@
 
+
 // @ts-nocheck
 'use client';
 
@@ -120,7 +121,7 @@ export default function FirstSavePage() {
           <DisclaimerAndConsentSection languageCode={currentLanguageCode} />
         </div>
       </main>
-      <FooterSection />
+      <FooterSection languageCode={currentLanguageCode} />
       <ChatbotWidget languageCode={currentLanguageCode} />
     </div>
   );
