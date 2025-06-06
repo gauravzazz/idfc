@@ -12,27 +12,71 @@ import { DisclaimerAndConsentSection } from '@/components/sections/DisclaimerAnd
 import { FooterSection } from '@/components/sections/FooterSection';
 import { Separator } from '@/components/ui/separator';
 import { ChatbotWidget } from '@/components/widgets/ChatbotWidget';
-import { Stepper } from '@/components/widgets/Stepper'; // Added import
+import { Stepper } from '@/components/widgets/Stepper';
 
-// Define initial language. 'en' for English or could be from browser/user preference.
 const initialLanguageCode = 'en';
 
-// Define steps for the Stepper (initially in English)
-// For full localization, these would also need to come from a translation dictionary
-const formSteps = [
-  "User Details",
-  "Professional Info",
-  "Select Product",
-  "Add Nominee",
-  "Disclaimer & Consent"
-];
+const stepTranslations = {
+  en: [
+    "User Details",
+    "Professional Info",
+    "Select Product",
+    "Add Nominee",
+    "Disclaimer & Consent"
+  ],
+  mr: [
+    "वापरकर्ता तपशील",
+    "व्यावसायिक माहिती",
+    "उत्पादन निवडा",
+    "नॉमिनी जोडा",
+    "अस्वीकरण आणि संमती"
+  ],
+  hi: [
+    "उपयोगकर्ता विवरण",
+    "पेशेवर जानकारी",
+    "उत्पाद चुनें",
+    "नामांकित व्यक्ति जोड़ें",
+    "अस्वीकरण और सहमति"
+  ],
+  kn: [
+    "ಬಳಕೆದಾರರ ವಿವರಗಳು",
+    "ವೃತ್ತಿಪರ ಮಾಹಿತಿ",
+    "ಉತ್ಪನ್ನವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "ನಾಮಿನಿಯನ್ನು ಸೇರಿಸಿ",
+    "ಹಕ್ಕು ನಿರಾಕರಣೆ ಮತ್ತು ಸಮ್ಮತಿ"
+  ],
+  ta: [
+    "பயனர் விவரங்கள்",
+    "தொழில்முறை தகவல்",
+    "தயாரிப்பைத் தேர்ந்தெடுக்கவும்",
+    "பரிந்துரைக்கப்பட்டவரைச் சேர்க்கவும்",
+    "பொறுப்புத்துறப்பு மற்றும் ஒப்புதல்"
+  ],
+  bn: [
+    "ব্যবহারকারীর বিবরণ",
+    "পেশাগত তথ্য",
+    "পণ্য নির্বাচন করুন",
+    "নমিনি যোগ করুন",
+    "দাবিত্যাগ এবং সম্মতি"
+  ],
+  gu: [
+    "વપરાશકર્તા વિગતો",
+    "વ્યાવસાયિક માહિતી",
+    "ઉત્પાદન પસંદ કરો",
+    "નોમિની ઉમેરો",
+    "અસ્વીકરણ અને સંમતિ"
+  ],
+};
+
+const getLocalizedSteps = (langCode: string): string[] => {
+  return stepTranslations[langCode as keyof typeof stepTranslations] || stepTranslations.en;
+};
 
 
 export default function FirstSavePage() {
   const [currentLanguageCode, setCurrentLanguageCode] = React.useState<string>(initialLanguageCode);
   const [currentStep, setCurrentStep] = React.useState(0);
 
-  // Simple mapping of step index to section ID for potential future scroll-to-section
   const sectionIds = [
     "userDetailsSection",
     "professionalDetailsSection",
@@ -41,11 +85,7 @@ export default function FirstSavePage() {
     "disclaimerAndConsentSection"
   ];
   
-  // Placeholder for actual localized step names if needed later
-  // const getLocalizedSteps = (langCode: string) => {
-  //   // Example: load from a translations.json or similar
-  //   return formSteps.map(step => localizedStepName(step, langCode));
-  // };
+  const formSteps = React.useMemo(() => getLocalizedSteps(currentLanguageCode), [currentLanguageCode]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -60,11 +100,6 @@ export default function FirstSavePage() {
         languageCode={currentLanguageCode}
       />
       <main className="flex-grow">
-        {/* 
-          For future enhancement, one could conditionally render sections 
-          or use the currentStep to scroll to the active section.
-          For now, all sections are rendered, and the stepper is a visual guide.
-        */}
         <div id={sectionIds[0]}>
           <UserDetailsFormSection languageCode={currentLanguageCode} />
         </div>
